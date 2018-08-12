@@ -48,8 +48,8 @@ function removeFromCart(item) {
     if (cart[i].itemName === item) {
       console.log(cart[i]);
       itemFound= true;
-      let newCart = cart.splice(i);
-      return newCart;
+      cart.splice(i);
+      return cart;
     } 
   }
   if(itemFound === false)
