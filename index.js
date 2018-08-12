@@ -43,6 +43,7 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   let itemFound= false;
+  if (cart.length > 0) {
   for ( let i=0; i <= cart.length; i++){
     if (cart[i].itemName === item) {
       itemFound= true;
@@ -52,6 +53,10 @@ function removeFromCart(item) {
   
   if(itemFound === false)
    return("That item is not in your cart")
+  } else {
+    return("That item is not in your cart")
+  }
+  
   
 }
 
