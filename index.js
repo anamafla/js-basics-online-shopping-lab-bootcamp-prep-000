@@ -11,18 +11,38 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
+ let price = Math.floor(100*Math.random())
+ let newItem = { itemName: item, itemPrice: price }
+ cart.push(newItem);
+ return (`${newItem.itemName} has been added to your cart.`)
 }
 
 function viewCart() {
   // write your code here
+  let length = cart.length;
+  if (length > 0) {
+    let message = "In your cart, you have";
+    for (let i = 0 ; i < length; i++){
+      message = message.concat(`${i === length-1 && i !==0?" and ":" "}${cart[i].itemName} at $${cart[i].itemPrice}${i === length-1 ?"." :  ","}` );
+    }
+    return message;
+    
+  } else
+  return ("Your shopping cart is empty.");
+  
 }
 
 function total() {
   // write your code here
+  let total= 0;
+  for ( let i=0; i<cart.length; i++)
+    total = total + cart[i].itemPrice;
+  return total;
 }
 
 function removeFromCart(item) {
   // write your code here
+  
 }
 
 function placeOrder(cardNumber) {
