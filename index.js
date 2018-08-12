@@ -48,6 +48,7 @@ function removeFromCart(item) {
     if (cart[i].itemName === item) {
       itemFound= true;
       cart.splice(i);
+      return cart;
     } 
   }
   
