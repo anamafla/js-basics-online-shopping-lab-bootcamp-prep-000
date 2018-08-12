@@ -55,7 +55,7 @@ function removeFromCart(item) {
   if(itemFound === false)
    return("That item is not in your cart")
   } else {
-    return("That item is not in your cart")
+    return("That item is not in your cart.")
   }
   
   
